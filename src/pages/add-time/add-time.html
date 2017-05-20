@@ -1,0 +1,20 @@
+<!--
+  Generated template for the AddTime page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add Time</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-label fixed>Time</ion-label>
+  <ion-input  [(ngModel)]="Time" type="time"></ion-input>
+<button ion-button block (click) = "addTime()">Save</button>
+</ion-content>

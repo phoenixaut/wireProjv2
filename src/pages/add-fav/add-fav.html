@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Add Favorite
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span ion-text color="primary" showWhen="ios">Cancel</span>
+        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item >
+      <ion-label>Tram Stop</ion-label>
+      <ion-select [(ngModel)]="TramStop">
+        <ion-option *ngFor="let item of items" value = {{item}}>{{item}}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Tram Color</ion-label>
+      <ion-select [(ngModel)]="tram">
+        <ion-option *ngFor="let tram of tramColors" value = {{tram}}>{{tram}}</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+    <button ion-button full (click)="addRe()">Save</button>
+</ion-content>

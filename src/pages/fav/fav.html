@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="presentAddModal()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Favorite</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+  <ion-item-sliding *ngFor="let list of lists | async">
+    <ion-item id = {{list.$key}} (click) = "seeMore($event)">
+      {{list.color}}-{{list.place}}
+    </ion-item>
+      <ion-item-options>
+        <button ion-button color="danger" id= {{list.$key}} (click)="deleteRe($event)"><ion-icon name="trash"></ion-icon> Delete</button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

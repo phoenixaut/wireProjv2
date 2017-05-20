@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Map</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="presentAddModal()">
+        <ion-icon outline name="information"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <img src="../assets/img/stop/Blue/blueline.png" class="imgsize" alt="">
+  <div class="">
+    <ion-icon name="arrow-dropright-circle" class="size" (click) = "GotoSche()"></ion-icon>
+  </div>
+  <img src="../assets/img/stop/Red/redline.png" class="imgsize" alt="">
+  <div class="">
+    <ion-icon name="arrow-dropright-circle" class="size" (click) = "GotoSche2()"></ion-icon>
+  </div>
+  <img src="../assets/img/stop/Green/greenline.png" class="imgsize" alt="">
+  <div class="">
+    <ion-icon name="arrow-dropright-circle" class="size" (click) = "GotoSche3()"></ion-icon>
+  </div>
+  <img src="../assets/img/stop/Yellow/yellowline.png" class="imgsize" alt="">
+  <div class="">
+    <ion-icon name="arrow-dropright-circle" class="size" (click) = "GotoSche4()"></ion-icon>
+  </div>
+</ion-content>
